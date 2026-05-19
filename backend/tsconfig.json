@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    // 1. Projektstruktur & Output
+    "target": "ES2022" /* Stabil och modern JS-version för Node.js */,
+    "module": "NodeNext" /* Krävs för modern Node.js med ES Modules ("type": "module") */,
+    "moduleResolution": "NodeNext" /* Låter TS hitta paket på samma sätt som Node.js gör live */,
+    "rootDir": "./src" /* Var din TypeScript-kod bor */,
+    "outDir": "./dist" /* Var den färdigkompilerade JavaScript-koden hamnar */,
+
+    // 2. Miljö & Bibliotek
+    "lib": [
+      "ES2022"
+    ] /* Inkluderar moderna funktioner i Node (inga webbläsar-grejer som 'dom') */,
+    "esModuleInterop": true /* Ger smidigare importer från äldre CommonJS-paket */,
+    "forceConsistentCasingInFileNames": true /* Ser till att import "Hund.ts" och "hund.ts" inte kraschar på Linux/Mac */,
+    "skipLibCheck": true /* Snabbar upp bygget genom att inte typkontrollera dina node_modules */,
+
+    // 3. Kodgenerering & Felsökning
+    "sourceMap": true /* Gör det mycket lättare att felsöka och se exakt vilken rad som kraschar */,
+    "declaration": false /* Sätt till true om du bygger ett bibliotek, annars behövs det inte för en backend */,
+
+    // 4. Strikt Typkontroll (Håller koden buggfri)
+    "strict": true /* Aktiverar alla strikta regler direkt */,
+    "noUncheckedIndexedAccess": true /* Varnar om du hämtar något ur t.ex. en array som kanske inte finns */,
+    "noImplicitReturns": true /* Kräver att alla vägar i en funktion faktiskt returnerar något */,
+    "noUnusedLocals": true /* Varnar om du har variabler som ligger och skräpar utan att användas */,
+    "noUnusedParameters": true /* Varnar om en funktion tar emot argument som aldrig används */,
+    "noFallthroughCasesInSwitch": true /* Glömmer du en 'break' i en switch-case så säger TS ifrån */
+  },
+  "include": [
+    "src/**/*"
+  ] /* Berätta för TypeScript att det BARA är filerna i src som ska kontrolleras */
+}

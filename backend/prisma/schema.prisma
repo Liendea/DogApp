@@ -1,0 +1,16 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+//  hundmodell/tabell
+model Dog {
+  id        Int      @id @default(autoincrement())
+  breed     String   @unique
+  imageUrl  String?  @db.Text // @db.Text behövs eftersom vissa bildlänkar från API:er kan vara väldigt långa
+  createdAt DateTime @default(now())
+}

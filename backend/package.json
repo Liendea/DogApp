@@ -2,11 +2,11 @@
   "name": "dogapp-api-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch src/server.ts",
     "build": "tsc --project tsconfig.build.json",
-    "start": "node dist/index.js",
+    "start": "node dist/server.js",
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:generate": "prisma generate",
@@ -18,13 +18,16 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "express": "^5.2.1"
+    "@prisma/client": "^6.19.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "prisma": "^6.19.3"
   },
   "devDependencies": {
-    "@prisma/client": "^6.19.3",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.1",
-    "prisma": "^6.19.3",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3"
   }

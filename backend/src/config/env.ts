@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 // Load environment variables from .env
 dotenv.config();
 
-const requiredEnvVars = ["DATABASE_URL", "FRONTEND_URL"] as const;
+const requiredEnvVars = ["DATABASE_URL"] as const;
 type RequiredEnvVars = (typeof requiredEnvVars)[number];
 
 export const validateEnv = (): void => {

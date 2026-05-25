@@ -2,7 +2,7 @@
 
 import { Breed } from "@prisma/client";
 import { prisma } from "../lib/prisma.js";
-import {ListResponse} from "../types/api.types.js";
+import { ListResponse } from "../types/api.types.js";
 
 export interface GetBreedsOptions {
   search?: string;
@@ -24,7 +24,7 @@ export const breedService = {
         ? {
             breed: {
               contains: search,
-              // mdoe: 'insensitive' — enable this if/when migrating to PostgreSQL
+              // mode: 'insensitive' — enable this if/when migrating to PostgreSQL
             },
           }
         : undefined,

@@ -2,7 +2,8 @@
 # Keep environment variables out of version control
 .env
 .env.local
-.env.*
+.env.development
+.env.production
 
 /src/generated/prisma
 

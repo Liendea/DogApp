@@ -2,6 +2,7 @@
 import { PrismaClient } from "@prisma/client";
 import { env } from "../config/env.js";
 
+// Prevents multiple PrismaClient instances during `tsx watch` hot-reloads.
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };

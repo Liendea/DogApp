@@ -1,7 +1,18 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
-  }
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "sourceMap": false
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.test.ts", // Tests out of build
+    "src/**/*.spec.ts",
+    "prisma/seed.ts" // Seeds out of build
+  ]
 }

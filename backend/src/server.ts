@@ -1,22 +1,21 @@
 // backend/src/server.ts
-import "dotenv/config";
-import { validateEnv } from "./config/env.js";
+import { validateEnv, env } from "./config/env.js";
 
 validateEnv();
 
 import app from "./app.js";
 import { prisma } from "./lib/prisma.js";
-import { env } from "./config/env.js";
 
 const server = app.listen(env.PORT, () => {
   console.log(`Server running on http://localhost:${env.PORT}`);
   console.log(`Enviroment: ${env.NODE_ENV}`);
-  env.NODE_ENV === "development"
-    ? console.log(`Database: ${env.DATABASE_URL.split("@")[1]}`)
-    : "";
+  if (env.NODE_ENV === "development") {
+    // Only show the host/port portion of the URL – never log credentials
+    console.log(`Database: ${env.DATABASE_URL.split("@")[1]}`);
+  }
 });
 
-const shutdown = async (signal: String): Promise<void> => {
+const shutdown = async (signal: string): Promise<void> => {
   console.log(`\n ${signal} received – shutting down gracefully...`);
   await prisma.$disconnect();
   server.close(() => {
@@ -32,19 +31,22 @@ process.on("SIGINT", () => {
   void shutdown("SIGINT");
 });
 
-process.stdin.on("data", (data) => {
-    const input = data.toString().trim().toLowerCase();
-    if (
-      [
-        "quit",
-        "close",
-        "bye",
-        "exit",
-        "ciao",
-        "hasta la vista",
-        "vi ses",
-      ].includes(input)
-    ) {
-      shutdown("stdin");
+// ––– Dev-only convenience: type a word to stop the server –––
+// Railway has no TTY, so process.stdin.isTTY is falsy there — guard required.
+if (process.stdin.isTTY) {
+  const STOP_WORDS = new Set([
+    "quit",
+    "close",
+    "bye",
+    "exit",
+    "ciao",
+    "hasta la vista",
+    "vi ses",
+  ]);
+
+  process.stdin.on("data", (data: Buffer) => {
+    if (STOP_WORDS.has(data.toString().trim().toLowerCase())) {
+      void shutdown("stdin");
     }
   });
+}

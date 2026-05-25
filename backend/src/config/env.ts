@@ -1,8 +1,7 @@
 // backend/src/config/env.ts
 import dotenv from "dotenv";
 
-// tsx already injects .env automatically in dev.
-// This call is a safety net for environments where tsx is not used.
+// Load environment variables from .env
 dotenv.config();
 
 const requiredEnvVars = ["DATABASE_URL", "FRONTEND_URL"] as const;

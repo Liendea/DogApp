@@ -21,6 +21,7 @@
 
     // 4. Strikt Typkontroll (Håller koden buggfri)
     "strict": true /* Aktiverar alla strikta regler direkt */,
+    "noEmitOnError": true,
     "noUncheckedIndexedAccess": true /* Varnar om du hämtar något ur t.ex. en array som kanske inte finns */,
     "noImplicitReturns": true /* Kräver att alla vägar i en funktion faktiskt returnerar något */,
     "noUnusedLocals": true /* Varnar om du har variabler som ligger och skräpar utan att användas */,

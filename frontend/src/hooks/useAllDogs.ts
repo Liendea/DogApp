@@ -28,7 +28,6 @@ export function useAllDogs() {
     };
     getDogs();
   }, []);
-  //dependency array?
 
   return { dogs, loading, error };
 }

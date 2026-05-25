@@ -1,20 +1,13 @@
 import { useAllDogs } from "./hooks/useAllDogs";
-
-//STRUKTUR:
-
-//sökfällt
-//flöde där man kan bläddra bland hundar
-//varje hund-kort är klickbart och leder till ett mer detaljerat kort
+import DogList from "./features/browseDogs/DogList";
 
 function App() {
+  // använd error och loading states från useAllDogs när det finns komponenter för dem
   const { dogs } = useAllDogs();
-  console.log(dogs);
   return (
     <>
-      <p className="underline text-7xl text-amber-950">tailwind test</p>
-      {dogs.map((item) => (
-        <h3 key={item.id}>{item.breed}</h3>
-      ))}
+      <h1 className="text-xl font-bold text-center">Dog App</h1>
+      <DogList dogs={dogs} />
     </>
   );
 }

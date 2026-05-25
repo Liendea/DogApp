@@ -2,7 +2,7 @@
 import type { CorsOptions } from "cors";
 import { env } from "./env.js";
 
-const allowedOrigins: string[] = [env.FRONTEND_URL];
+const allowedOrigins: string[] = ["http://localhost:5173", env.FRONTEND_URL];
 
 /**
  * CORS configuration.

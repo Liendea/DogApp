@@ -1,7 +1,7 @@
 {
   "name": "dogapp-api-backend",
   "version": "1.0.0",
-  "description": "Backend API for a dog breed application, providing searchable breed data with Express, TypeScript, Prisma, and MySQL.",
+  "description": "Backend API for a dog breed application, providing searchable breed data with Node.js, Express, TypeScript, Prisma, and MySQL.",
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",

@@ -1,3 +1,5 @@
+import ShowDetailsBtn from "./ShowDetailsBtn";
+
 type CardProps = {
   breed: string;
   image: string | null;
@@ -18,8 +20,8 @@ export default function SimpleDogCard({ breed, image }: CardProps) {
         ></img>
       </div>
 
-      {/* bryt ut button som egen komponent, ska ta onclick som prop */}
-      <button className="border px-3 py-2 rounded">Visa Mer</button>
+      {/* onclick -> öppna modal */}
+      <ShowDetailsBtn />
     </div>
   );
 }

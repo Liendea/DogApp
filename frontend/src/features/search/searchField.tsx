@@ -14,7 +14,7 @@ export function SearchField({ onSearch }: SearchFieldProps) {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-end mb-4 mr-4">
       <input
         type="text"
         placeholder="Search for a breed..."

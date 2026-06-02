@@ -2,8 +2,8 @@
 export default function Footer() {
 
   return (
-  <footer className="w-full  border-t border-secondary h-50 bg-white">
-    <div className="flex flex-row items-center justify-center mt-5">
+  <footer className="w-full  border-t border-secondary h-30 sm:h-40 bg-white">
+    <div className="flex flex-row items-center justify-center mt-2 sm:mt-5">
     <p className="text-sm">Github :</p>
     <a
     href="https://github.com/Liendea/DogApp"

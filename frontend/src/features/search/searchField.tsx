@@ -14,15 +14,21 @@ export function SearchField({ setQuery }: SearchFieldProps) {
     const input = e.target.value;
     setValue(input);
 
-    if (input.length > 0) {
-      const filtered = dogsData
-        .map((dog) => dog.breed) // justera till rätt nyckel i din json
-        .filter((breed) => breed.toLowerCase().startsWith(input.toLowerCase()))
-        .slice(0, 5); // max 5 förslag
-      setSuggestions(filtered);
-    } else {
+    if (input.length === 0) {
       setSuggestions([]);
+      setQuery(""); // återgå till alla hundar när fältet är tomt
+      return;
     }
+
+    if (input.length < value.length) {
+      setQuery(""); // återgå till alla hundar när man backar
+    }
+
+    const filtered = dogsData
+      .map((dog) => dog.breed)
+      .filter((breed) => breed.toLowerCase().startsWith(input.toLowerCase()))
+      .slice(0, 10); // begränsa till 10 förslag
+    setSuggestions(filtered);
   };
 
   const handleSelect = (breed: string) => {
@@ -35,6 +41,9 @@ export function SearchField({ setQuery }: SearchFieldProps) {
     if (e.key === "Enter") {
       setSuggestions([]);
       setQuery(value);
+      if (suggestions.length === 1) {
+        setValue(suggestions[0]); // om endast 1 förslag ges så sätt det till inputfält automatiskt när man trycker på enter
+      }
     }
   };
 

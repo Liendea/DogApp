@@ -1,1 +1,11 @@
+/* /src/index.css */
+
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #09bc8a;
+  --color-secondary: #ebebeb;
+  --color-hover-primary: #c5ffd5;
+
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}

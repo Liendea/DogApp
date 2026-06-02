@@ -1,4 +1,4 @@
-import { fetchAllDogs } from "../api/fetchAllDogs";
+import { fetchDogs } from "../api/fetchDogs";
 import { useEffect, useState } from "react";
 import type { Breed } from "../types/Breed";
 
@@ -14,7 +14,7 @@ export function useAllDogs() {
 
       try {
         //behöver vi count för något?
-        const { data } = await fetchAllDogs();
+        const { data } = await fetchDogs();
         setDogs(data);
       } catch (e) {
         if (e instanceof Error) {

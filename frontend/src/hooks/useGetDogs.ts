@@ -1,8 +1,8 @@
-import { fetchAllDogs } from "../api/fetchAllDogs";
+import { fetchDogs } from "../api/fetchDogs";
 import { useEffect, useState } from "react";
 import type { Breed } from "../types/Breed";
 
-export function useAllDogs() {
+export function useGetDogs(query?: string) {
   const [dogs, setDogs] = useState<Breed[] | []>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
@@ -14,7 +14,7 @@ export function useAllDogs() {
 
       try {
         //behöver vi count för något?
-        const { data } = await fetchAllDogs();
+        const { data } = await fetchDogs(query);
         setDogs(data);
       } catch (e) {
         if (e instanceof Error) {
@@ -27,7 +27,7 @@ export function useAllDogs() {
       }
     };
     getDogs();
-  }, []);
+  }, [query]);
 
   return { dogs, loading, error };
 }

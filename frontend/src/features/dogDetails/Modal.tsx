@@ -46,9 +46,9 @@ export default function Modal({ dog, onClose }: ModalProps) {
                     <path
                       d="M16.5833 7.83333V16.5833L22.4167 19.5M31.1667 16.5833C31.1667 24.6375 24.6375 31.1667 16.5833 31.1667C8.52918 31.1667 2 24.6375 2 16.5833C2 8.52918 8.52918 2 16.5833 2C24.6375 2 31.1667 8.52918 31.1667 16.5833Z"
                       stroke="#09BC8A"
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
 

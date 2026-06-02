@@ -10,8 +10,7 @@ function App() {
   const { dogs } = useGetDogs(query);
   return (
     <>
-    <Header />
-      <h1 className="text-xl font-bold text-center">Dog App</h1>
+      <Header />
       <SearchField setQuery={setQuery} />
       <DogList dogs={dogs} />
     </>

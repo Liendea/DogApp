@@ -51,7 +51,7 @@ export default function Footer() {
     </div>
     </div>
     </div>
-    <p className="text-sm text-center md:text-right text-gray-500 mt-8">@DogApp 2026</p>
+    <p className="text-sm text-center md:text-right text-gray-500 mt-6 pb-4">@DogApp 2026</p>
   </footer>
   )
 }

@@ -1,4 +1,4 @@
-/* /src/index.css */
+/* frontend/src/index.css */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import "tailwindcss";
 
@@ -13,5 +13,6 @@
   --color-secondary: #ebebeb;
   --color-primary-hover: #c5ffd5;
 
-  --font-color-primary: #hsla(0, 0%, 0%, 1);
+  --font-color-primary: #000;
 }
+

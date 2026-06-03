@@ -1,5 +1,6 @@
 // frontend/src/features/dogDetails/Modal.tsx
 
+import { useEffect } from "react";
 import CloseBtn from "./CloseBtn";
 import type { Breed } from "@/types/Breed";
 import FavBtn from "./favBtn";
@@ -10,6 +11,12 @@ type ModalProps = {
 };
 
 export default function Modal({ dog, onClose }: ModalProps) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
   const fallback = `https://placehold.net/default.png`;
 
   return (

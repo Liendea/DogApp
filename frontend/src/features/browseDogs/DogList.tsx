@@ -17,8 +17,11 @@ export default function DogList({ dogs }: ListProps) {
         <div className="absolute top-380 -right-40 w-175 h-175 rounded-full bg-primary" />
         <div className="absolute top-680 -left-40 w-175 h-175 rounded-full bg-primary" />
 
+        <h1 className="text-3xl font-bold text-center mb-4 ">
+          Find your perfect companion
+        </h1>
         {/* DogList */}
-        <section className=" relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 m-2">
+        <section className=" relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 m-2 md:p-4 mb-4">
           {dogs.map((dog) => (
             <SimpleDogCard
               key={dog.id}

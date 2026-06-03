@@ -24,7 +24,7 @@ export default function Modal({ dog, onClose }: ModalProps) {
 
           {/* Content */}
           <div className="flex flex-1 flex-col p-8">
-            <h2 className="font-sans text-4xl font-bold uppercase text-black">
+            <h2 className="font-sans text-4xl font-bold capitalize text-black">
               {dog.breed}
             </h2>
 

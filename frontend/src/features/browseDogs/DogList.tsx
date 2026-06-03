@@ -18,7 +18,7 @@ export default function DogList({ dogs }: ListProps) {
         <div className="absolute top-680 -left-40 w-175 h-175 rounded-full bg-primary" />
 
         {/* DogList */}
-        <section className=" relative z-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 m-2">
+        <section className=" relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 m-2">
           {dogs.map((dog) => (
             <SimpleDogCard
               key={dog.id}

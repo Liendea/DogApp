@@ -31,16 +31,16 @@ export default function Modal({ dog, onClose }: ModalProps) {
 
         {/* Content */}
         <div className="flex flex-1 flex-col p-6 md:p-8 overflow-y-auto">
-          <h2 className="font-sans text-3xl md:text-4xl font-bold capitalize text-black">
+          <h2 className="font-sans text-lg md:text-4xl font-bold capitalize text-black">
             {dog.breed}
           </h2>
 
-          <p className="mt-2 text-gray-500 leading-relaxed">
+          <p className="md:mt-2 text-gray-500 leading-relaxed text-sm md:text-lg">
             {dog.description}
           </p>
 
           {/* Stats */}
-          <div className="mt-6 md:mt-8 grid grid-cols-2 gap-4 md:gap-6">
+          <div className="mt-6 md:mt-8 grid md:grid-cols-2 gap-2 md:gap-6">
             {/* Lifespan */}
             <div>
               <div className="flex items-center gap-2">
@@ -59,10 +59,10 @@ export default function Modal({ dog, onClose }: ModalProps) {
                   />
                 </svg>
 
-                <h3 className="font-semibold text-black">Lifespan</h3>
+                <h3 className="font-semibold text-black text-sm md:text-lg">Lifespan</h3>
               </div>
 
-              <p className="mt-2 text-gray-500 text-sm md:text-base">
+              <p className="mt-2 text-gray-500 text-sm md:text-lg">
                 {dog.lifeSpan}
               </p>
             </div>
@@ -85,7 +85,7 @@ export default function Modal({ dog, onClose }: ModalProps) {
                   />
                 </svg>
 
-                <h3 className="font-semibold text-black">Breed Origin</h3>
+                <h3 className="font-semibold text-black text-sm md:text-lg">Breed Origin</h3>
               </div>
 
               <p className="mt-2 text-gray-500 text-sm md:text-base">
@@ -95,7 +95,7 @@ export default function Modal({ dog, onClose }: ModalProps) {
           </div>
 
           {/* Temperament */}
-          <div className="mt-6 md:mt-8">
+          <div className="mt-3 md:mt-8">
             <div className="flex items-center gap-2">
               <svg
                 className="h-5 w-5 shrink-0 text-primary"
@@ -109,10 +109,10 @@ export default function Modal({ dog, onClose }: ModalProps) {
                 />
               </svg>
 
-              <h3 className="font-semibold text-black">Temperament</h3>
+              <h3 className="font-semibold text-black text-sm md:text-lg">Temperament</h3>
             </div>
 
-            <p className="mt-2 text-gray-500 leading-relaxed text-sm md:text-base">
+            <p className="mt-1 text-gray-500 leading-relaxed text-sm md:text-base">
               {dog.temperament}
             </p>
           </div>

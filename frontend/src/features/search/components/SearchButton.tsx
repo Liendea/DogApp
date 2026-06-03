@@ -1,4 +1,4 @@
-import SearchIcon from "../../../reusable_components/SearchIcon";
+import SearchIcon from "@/reusable_components/SearchIcon";
 
 type SearchButtonProps = {
   onClick?: () => void;

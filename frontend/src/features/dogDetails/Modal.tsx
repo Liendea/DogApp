@@ -1,7 +1,7 @@
 // frontend/src/features/dogDetails/Modal.tsx
 
 import CloseBtn from "./CloseBtn";
-import type { Breed } from "../../types/Breed";
+import type { Breed } from "@/types/Breed";
 import FavBtn from "./favBtn";
 
 type ModalProps = {

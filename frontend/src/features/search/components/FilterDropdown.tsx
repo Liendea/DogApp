@@ -10,6 +10,7 @@ type FilterDropdownProps = {
   onTemperamentToggle: (temperament: string) => void;
   onOriginChange: (origin: string) => void;
   onClearFilters: () => void;
+  onApply: () => void;
 };
 
 export default function FilterDropdown({
@@ -22,6 +23,7 @@ export default function FilterDropdown({
   onTemperamentToggle,
   onOriginChange,
   onClearFilters,
+  onApply,
 }: FilterDropdownProps) {
   return (
     <div
@@ -78,6 +80,13 @@ export default function FilterDropdown({
           ))}
         </select>
       </div>
+
+      <button
+        onClick={onApply}
+        className="mt-4 w-full bg-primary text-white text-sm font-semibold py-2 rounded-xl hover:opacity-90 transition-opacity"
+      >
+        Apply filter
+      </button>
     </div>
   );
 }

@@ -130,6 +130,10 @@ export function SearchField({
             onTemperamentToggle={handleTemperamentToggle}
             onOriginChange={setSelectedOrigin}
             onClearFilters={handleClearFilters}
+            onApply={() => {
+              handleSearch();
+              setFilterOpen(false);
+            }}
           />
         )}
       </div>

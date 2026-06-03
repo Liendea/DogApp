@@ -24,6 +24,7 @@ function App() {
       ) : (
         <DogList dogs={dogs} />
       )}
+      <Footer />
     </>
   );
 }

@@ -17,7 +17,7 @@ export default function SimpleDogCard({ breed, image, onOpen }: CardProps) {
           className="w-full h-full object-cover"
         ></img>
       </div>
-      <h3 className="font-sans text-2xl font-bold capitalize text-black">
+      <h3 className="font-sans text-xl font-bold capitalize text-black">
         {breed}
       </h3>
 

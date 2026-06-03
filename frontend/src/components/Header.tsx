@@ -1,12 +1,15 @@
-import headerImage from "../assets/Header10.png";
+import headerImage from "../assets/Header12.png";
 
 export default function Header() {
   return (
-    <header className="bg-white flex items-center justify-between h-160 overflow-hidden">
-      <img src={headerImage} alt="Header" className="w-full h-full object-cover"/>
-      <div className="z-10 absolute ml-35 w-180 flex flex-col gap-6">
-      <h1 className="font-bold text-5xl">UPPTÄCK HUNDAR OCH DERAS PERSONLIGHETER</h1>
-      <h4 className="text-md">Sök bland olika hundraser och utforska deras egenskaper, temperament och behov. Jämför profiler, se bilder och hitta den hund som passar din livsstil bäst — oavsett om du letar efter en aktiv träningspartner eller en lugn familjehund.</h4>
+    <header className=" relative bg-white flex items-center justify-center h-80 sm:h-160 overflow-hidden">
+      <h1 className="absolute text-4xl font-bold top-1 mt-5 border-b-5 z-10">DOGAPP</h1>
+      <img src={headerImage} alt="Header" className="w-full h-full object-cover hidden lg:block"/>
+      <div className=" absolute top left-50 w-405 h-205 rounded-full bg-primary lg:hidden " />
+      
+      <div className=" sm:block hidden w-150  absolute  lg:mr-130 lg:w-110  xl:mr-170 xl:w-150 flex-col gap-5 ">
+      <h2 className="font-bold text-5xl mb-3">DISCOVER DOGS AND THEIR PERSONALITIES</h2>
+      <h4 className="text-md">Browse different dog breeds and explore their characteristics, temperament, and needs. Compare profiles, view photos, and find the dog that best suits your lifestyle — whether you're looking for an active training companion or a calm family dog.</h4>
       </div>
     </header>
   );

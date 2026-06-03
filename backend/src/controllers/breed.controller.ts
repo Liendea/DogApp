@@ -18,11 +18,21 @@ export const getAllBreeds = async (
 ): Promise<void> => {
   try {
     const search =
-      typeof req.query.search === "string"
+      typeof req.query.search === "string" && req.query.search.trim()
         ? req.query.search.trim()
         : undefined;
 
-    const result = await breedService.getBreeds({ search });
+    const temperament =
+      typeof req.query.temperament === "string" && req.query.temperament.trim()
+        ? req.query.temperament.trim()
+        : undefined;
+
+    const origin =
+      typeof req.query.origin === "string" && req.query.origin.trim()
+        ? req.query.origin.trim()
+        : undefined;
+
+    const result = await breedService.getBreeds({ search, temperament, origin });
     res.json(result);
   } catch (error) {
     next(error);

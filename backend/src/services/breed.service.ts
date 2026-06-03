@@ -6,28 +6,24 @@ import { ListResponse } from "../types/api.types.js";
 
 export interface GetBreedsOptions {
   search?: string;
+  temperament?: string;
+  origin?: string;
 }
 
-/**
- * Returns all breeds, optionally filtered by a partial name match.
- *
- * MySQL note: `mode: 'insensitive'` is PostgreSQL-only in Prisma.
- * Case-insensitivity here relies on the column collation — the default
- * `utf8mb4_general_ci` (and `utf8mb4_unicode_ci`) on Railway MySQL is
- * case-insensitive, so `contains` already behaves case-insensitively.
- * If you ever migrate to PostgreSQL, add `mode: 'insensitive'` to the filter.
- */
 export const breedService = {
-  async getBreeds({ search }: GetBreedsOptions): Promise<ListResponse<Breed>> {
+  async getBreeds({ search, temperament, origin }: GetBreedsOptions): Promise<ListResponse<Breed>> {
+    const temperaments = temperament
+      ? temperament.split(",").map((t) => t.trim()).filter(Boolean)
+      : [];
+
     const breeds = await prisma.breed.findMany({
-      where: search
-        ? {
-            breed: {
-              contains: search,
-              // mode: 'insensitive' — enable this if/when migrating to PostgreSQL
-            },
-          }
-        : undefined,
+      where: {
+        ...(search ? { breed: { contains: search } } : {}),
+        ...(temperaments.length > 0
+          ? { AND: temperaments.map((t) => ({ temperament: { contains: t } })) }
+          : {}),
+        ...(origin ? { breedOrigin: { contains: origin } } : {}),
+      },
       orderBy: { breed: "asc" },
     });
 

@@ -14,4 +14,6 @@ export interface ErrorResponse {
 /** Parsed query params for breed search. */
 export interface BreedQueryParams {
   search?: string;
+  temperament?: string;
+  origin?: string;
 }

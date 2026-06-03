@@ -5,6 +5,7 @@ import { SearchField } from "./features/search/searchField";
 import { useState } from "react";
 import LoadingSpinner from "./reusable_components/loadingSpinner";
 import Error from "./reusable_components/error";
+import Footer from "./components/Footer";
 
 function App() {
   const [query, setQuery] = useState<string>("");
@@ -23,6 +24,7 @@ function App() {
       ) : (
         <DogList dogs={dogs} />
       )}
+      <Footer />
     </>
   );
 }

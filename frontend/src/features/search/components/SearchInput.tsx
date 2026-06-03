@@ -1,6 +1,7 @@
 import React from "react";
 import FilterIcon from "./FilterICon";
 import SearchButton from "./SearchButton"; // Justera sökbanan om det behövs
+import ClearIcon from "./ClearIcon";
 
 type SearchInputProps = {
   value: string;
@@ -50,8 +51,20 @@ export default function SearchInput({
         onKeyDown={onKeyDown}
       />
 
-      {/* Sökknapp */}
-      <div className="absolute right-4 md:right-0 top-1/2 transform -translate-y-1/2 flex items-center">
+      {/* Sökknapp + Clear */}
+      <div className="absolute right-4 md:right-0 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
+        {value && (
+          <ClearIcon
+            width={20}
+            height={20}
+            className="cursor-pointer text-gray-500 hover:text-gray-700 transition-colors"
+            onClick={() => {
+              onChange({
+                target: { value: "" },
+              } as React.ChangeEvent<HTMLInputElement>);
+            }}
+          />
+        )}
         <SearchButton onClick={onSearch} />
       </div>
     </>

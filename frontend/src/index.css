@@ -15,9 +15,9 @@
 
   --font-color-primary: #hsla(0, 0%, 0%, 1);
 
-  --font-size-xsmall: 1.5rem; // p
-  --font-size-small: 2.25rem; // H3
-  --font-size-medium: 2.5rem; // H2
-  --font-size-large: 2.75rem; // H1
+  --font-size-xsmall: 1.5rem; /* p */
+  --font-size-small: 2.25rem; /* H3 */
+  --font-size-medium: 2.5rem; /* H2 */
+  --font-size-large: 2.75rem; /* H1 */
 }
 

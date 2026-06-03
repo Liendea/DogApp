@@ -214,7 +214,7 @@ export function SearchField({
                 onChange={(e) => handleOriginChange(e.target.value)}
                 className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary bg-white"
               >
-                <option value="">Alla länder</option>
+                <option value="">All origins</option>
                 {allOrigins.map((origin) => (
                   <option key={origin} value={origin}>
                     {origin}

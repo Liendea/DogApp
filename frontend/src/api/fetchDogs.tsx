@@ -1,12 +1,16 @@
 import type { Breed } from "../types/Breed";
 
-export async function fetchDogs(query?: string) {
+export async function fetchDogs(
+  query?: string,
+  temperament?: string,
+  origin?: string,
+) {
   const BASE_URL = import.meta.env.VITE_API_URL;
   const endpoint = new URL(`${BASE_URL}/api/breeds`);
 
-  if (query) {
-    endpoint.searchParams.set("search", query);
-  }
+  if (query) endpoint.searchParams.set("search", query);
+  if (temperament) endpoint.searchParams.set("temperament", temperament);
+  if (origin) endpoint.searchParams.set("origin", origin);
 
   const res = await fetch(endpoint.toString());
   if (!res.ok) {

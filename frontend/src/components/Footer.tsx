@@ -1,32 +1,19 @@
+import XIcon from "../reusable_components/XIcon"
+import InstagramIcon from "../reusable_components/InstagramIcon"
+import YoutubeIcon from "../reusable_components/YoutubeIcon"
+import LinkedinIcon from "../reusable_components/LinkedinIcon"
 
 export default function Footer() {
 
   return (
   <footer className="w-full border-t border-secondary h-40 p-8 sm:h-68.5 bg-white">
     <div className="flex flex-col gap-8 md:flex-row md:gap-40">
-<svg width="144" height="24" viewBox="0 0 144 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14.2737 10.1635L23.2023 0H21.0872L13.3313 8.82305L7.14125 0H0L9.3626 13.3433L0 24H2.11504L10.3002 14.6806L16.8388 24H23.98M2.8784 1.5619H6.12769L21.0856 22.5148H17.8355" fill="#1E1E1E"/>
-<g clip-path="url(#clip0_144_293)">
-<path d="M51.98 2.163C55.184 2.163 55.564 2.175 56.83 2.233C60.082 2.381 61.601 3.924 61.749 7.152C61.807 8.417 61.818 8.797 61.818 12.001C61.818 15.206 61.806 15.585 61.749 16.85C61.6 20.075 60.085 21.621 56.83 21.769C55.564 21.827 55.186 21.839 51.98 21.839C48.776 21.839 48.396 21.827 47.131 21.769C43.871 21.62 42.36 20.07 42.212 16.849C42.154 15.584 42.142 15.205 42.142 12C42.142 8.796 42.155 8.417 42.212 7.151C42.361 3.924 43.876 2.38 47.131 2.232C48.397 2.175 48.776 2.163 51.98 2.163ZM51.98 0C48.721 0 48.313 0.014 47.033 0.072C42.675 0.272 40.253 2.69 40.053 7.052C39.994 8.333 39.98 8.741 39.98 12C39.98 15.259 39.994 15.668 40.052 16.948C40.252 21.306 42.67 23.728 47.032 23.928C48.313 23.986 48.721 24 51.98 24C55.239 24 55.648 23.986 56.928 23.928C61.282 23.728 63.71 21.31 63.907 16.948C63.966 15.668 63.98 15.259 63.98 12C63.98 8.741 63.966 8.333 63.908 7.053C63.712 2.699 61.291 0.273 56.929 0.073C55.648 0.014 55.239 0 51.98 0ZM51.98 5.838C48.577 5.838 45.818 8.597 45.818 12C45.818 15.403 48.577 18.163 51.98 18.163C55.383 18.163 58.142 15.404 58.142 12C58.142 8.597 55.383 5.838 51.98 5.838ZM51.98 16C49.771 16 47.98 14.21 47.98 12C47.98 9.791 49.771 8 51.98 8C54.189 8 55.98 9.791 55.98 12C55.98 14.21 54.189 16 51.98 16ZM58.386 4.155C57.59 4.155 56.945 4.8 56.945 5.595C56.945 6.39 57.59 7.035 58.386 7.035C59.181 7.035 59.825 6.39 59.825 5.595C59.825 4.8 59.181 4.155 58.386 4.155Z" fill="#1E1E1E"/>
-</g>
-<g clip-path="url(#clip1_144_293)">
-<path d="M99.595 3.18388C95.991 2.93788 87.964 2.93888 84.365 3.18388C80.468 3.44988 80.009 5.80388 79.98 11.9999C80.009 18.1849 80.464 20.5489 84.365 20.8159C87.965 21.0609 95.991 21.0619 99.595 20.8159C103.492 20.5499 103.951 18.1959 103.98 11.9999C103.951 5.81488 103.496 3.45088 99.595 3.18388ZM88.98 15.9999V7.99988L96.98 11.9929L88.98 15.9999Z" fill="#1E1E1E"/>
-</g>
-<g clip-path="url(#clip2_144_293)">
-<path d="M138.98 0H124.98C122.219 0 119.98 2.239 119.98 5V19C119.98 21.761 122.219 24 124.98 24H138.98C141.742 24 143.98 21.761 143.98 19V5C143.98 2.239 141.742 0 138.98 0ZM127.98 19H124.98V8H127.98V19ZM126.48 6.732C125.514 6.732 124.73 5.942 124.73 4.968C124.73 3.994 125.514 3.204 126.48 3.204C127.446 3.204 128.23 3.994 128.23 4.968C128.23 5.942 127.447 6.732 126.48 6.732ZM139.98 19H136.98V13.396C136.98 10.028 132.98 10.283 132.98 13.396V19H129.98V8H132.98V9.765C134.376 7.179 139.98 6.988 139.98 12.241V19Z" fill="#1E1E1E"/>
-</g>
-<defs>
-<clipPath id="clip0_144_293">
-<rect width="24" height="24" fill="white" transform="translate(39.98)"/>
-</clipPath>
-<clipPath id="clip1_144_293">
-<rect width="24" height="24" fill="white" transform="translate(79.98)"/>
-</clipPath>
-<clipPath id="clip2_144_293">
-<rect width="24" height="24" fill="white" transform="translate(119.98)"/>
-</clipPath>
-</defs>
-</svg>
+      <div className="flex flex-row gap-4">
+        <XIcon width={24} height={24} className="text-font-color-primary" />
+        <InstagramIcon width={24} height={24} className="text-font-color-primary"  />
+        <YoutubeIcon width={24} height={24} className="text-font-color-primary"  />
+        <LinkedinIcon  width={24} height={24} className="text-font-color-primary" />
+  </div>
     <div className="grid grid-cols-3 gap-8">
     <div className="flex flex-col gap-3 md:w-65.5 md:h-60.5">
       <h3 className="font-bold mb-5">Use Cases</h3>

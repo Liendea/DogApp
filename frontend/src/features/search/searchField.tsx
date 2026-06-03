@@ -67,7 +67,7 @@ export function SearchField({ setQuery }: SearchFieldProps) {
         </div>
 
         {suggestions.length > 0 && (
-          <ul className="absolute z-10 w-full bg-white border border-gray-200 rounded-xl mt-1 shadow-md overflow-hidden">
+          <ul className="absolute z-50 w-full bg-white border border-gray-200 rounded-xl mt-1 shadow-md overflow-hidden">
             {suggestions.map((breed) => (
               <li
                 key={breed}

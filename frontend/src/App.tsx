@@ -9,12 +9,25 @@ import Footer from "./components/Footer";
 
 function App() {
   const [query, setQuery] = useState<string>("");
-  const { dogs, loading, error } = useGetDogs(query);
+  const [temperament, setTemperament] = useState<string>("");
+  const [origin, setOrigin] = useState<string>("");
+
+  const { dogs, loading, error } = useGetDogs(
+    query || undefined,
+    temperament || undefined,
+    origin || undefined,
+  );
+
   const noDogs = !loading && !error && dogs.length === 0;
+
   return (
     <>
       <Header />
-      <SearchField setQuery={setQuery} />
+      <SearchField
+        setQuery={setQuery}
+        setTemperament={setTemperament}
+        setOrigin={setOrigin}
+      />
       {error ? (
         <Error message="Något gick fel, försök igen" />
       ) : loading ? (

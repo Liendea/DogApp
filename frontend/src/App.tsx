@@ -29,11 +29,11 @@ function App() {
         setOrigin={setOrigin}
       />
       {error ? (
-        <Error message="Något gick fel, försök igen" />
+        <Error message="Something went wrong, please try again" />
       ) : loading ? (
         <LoadingSpinner />
       ) : noDogs ? (
-        <Error message="Inga hundar matchade din sökning" />
+        <Error message="No breeds matched your search" />
       ) : (
         <DogList dogs={dogs} />
       )}

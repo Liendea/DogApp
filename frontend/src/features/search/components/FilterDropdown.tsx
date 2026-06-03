@@ -37,7 +37,7 @@ export default function FilterDropdown({
             onClick={onClearFilters}
             className="text-xs text-primary hover:underline"
           >
-            Rensa alla
+            Clear all
           </button>
         )}
       </div>

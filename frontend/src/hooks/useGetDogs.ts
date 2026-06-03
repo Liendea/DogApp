@@ -1,6 +1,6 @@
-import { fetchDogs } from "../api/fetchDogs";
+import { fetchDogs } from "@/api/fetchDogs";
 import { useEffect, useState } from "react";
-import type { Breed } from "../types/Breed";
+import type { Breed } from "@/types/Breed";
 
 export function useGetDogs(
   query?: string,

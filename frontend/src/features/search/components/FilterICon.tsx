@@ -1,4 +1,4 @@
-import SvgIcon from "../../../reusable_components/SvgIcon";
+import SvgIcon from "@/reusable_components/SvgIcon";
 
 type Props = {
   width?: number;

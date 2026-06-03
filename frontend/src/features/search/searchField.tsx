@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from "react";
-import dogsData from "../../assets/dogs.json";
-import useClickOutside from "../../hooks/useClickOutside";
+import dogsData from "@/assets/dogs.json";
+import useClickOutside from "@/hooks/useClickOutside";
 
 // Underkomponenter
 import SearchInput from "./components/SearchInput";

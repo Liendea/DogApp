@@ -3,7 +3,7 @@ export default function Footer() {
 
   return (
   <footer className="w-full border-t border-secondary h-40 p-8 sm:h-68.5 bg-white">
-    <div className="flex flex-row gap-40">
+    <div className="flex flex-col gap-8 md:flex-row md:gap-40">
 <svg width="144" height="24" viewBox="0 0 144 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14.2737 10.1635L23.2023 0H21.0872L13.3313 8.82305L7.14125 0H0L9.3626 13.3433L0 24H2.11504L10.3002 14.6806L16.8388 24H23.98M2.8784 1.5619H6.12769L21.0856 22.5148H17.8355" fill="#1E1E1E"/>
 <g clip-path="url(#clip0_144_293)">
@@ -27,22 +27,22 @@ export default function Footer() {
 </clipPath>
 </defs>
 </svg>
-    <div className="flex flex-row gap-4">
-    <div className="flex flex-col gap-3 w-65.5 h-60.5">
+    <div className="grid grid-cols-3 gap-8">
+    <div className="flex flex-col gap-3 md:w-65.5 md:h-60.5">
       <h3 className="font-bold mb-5">Use Cases</h3>
       <p className="">Link</p>
       <p className="">Link</p>
       <p className="">Link</p>
       <p className="">Link</p>
     </div>
-    <div className="flex flex-col gap-3 w-65.5 h-60.5">
+    <div className="flex flex-col gap-3 md:w-65.5 md:h-60.5">
       <h3 className="font-bold mb-5">Explore</h3>
       <p className="">Link</p>
       <p className="">Link</p>
       <p className="">Link</p>
       <p className="">Link</p>
     </div>
-    <div className="flex flex-col gap-3 w-65.5 h-60.5">
+    <div className="flex flex-col gap-3 md:w-65.5 md:h-60.5">
       <h3 className="font-bold mb-5">Resources</h3>
       <p className="">Link</p>
       <p className="">Link</p>
@@ -51,7 +51,7 @@ export default function Footer() {
     </div>
     </div>
     </div>
-    <p className="text-sm flex flex-row-reverse text-gray-500 pb-5">@DogApp 2026</p>
+    <p className="text-sm text-center md:text-right text-gray-500 mt-8">@DogApp 2026</p>
   </footer>
   )
 }

@@ -34,7 +34,7 @@ function App() {
       <Header />
 
       <div
-        className={`flex flex-col-reverse md:flex-row items-center mt-4 border border-gray-200 pb-4 px-4 md:px-0 ${hasSearched ? "justify-between" : "justify-end"}`}
+        className={`flex flex-col-reverse md:flex-row items-center mt-4  pb-4 px-4 md:px-0 ${hasSearched ? "justify-between" : "justify-end"}`}
       >
         {hasSearched && (
           <button
@@ -52,6 +52,10 @@ function App() {
           setHasSearched={setHasSearched}
         />
       </div>
+
+      <h1 className="text-xl md:text-3xl font-bold text-center mb-4">
+        Find your perfect companion
+      </h1>
 
       {error ? (
         <Error message="Something went wrong, please try again" />

@@ -18,9 +18,7 @@ export default function DogList({ dogs }: ListProps) {
         <div className="absolute top-380 -right-40 w-175 h-175 rounded-full bg-primary" />
         <div className="absolute top-680 -left-40 w-175 h-175 rounded-full bg-primary" />
 
-        <h1 className="text-3xl font-bold text-center mb-4 ">
-          Find your perfect companion
-        </h1>
+      
 
 
         {/* DogList */}

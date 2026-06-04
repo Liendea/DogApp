@@ -6,11 +6,13 @@ import { useState } from "react";
 import LoadingSpinner from "./reusable_components/loadingSpinner";
 import Error from "./reusable_components/error";
 import Footer from "./components/Footer";
+import ArrowLeft from "./reusable_components/ArrowLeft";
 
 function App() {
   const [query, setQuery] = useState<string>("");
   const [temperament, setTemperament] = useState<string>("");
   const [origin, setOrigin] = useState<string>("");
+  const [hasSearched, setHasSearched] = useState(false);
 
   const { dogs, loading, error } = useGetDogs(
     query || undefined,
@@ -20,14 +22,37 @@ function App() {
 
   const noDogs = !loading && !error && dogs.length === 0;
 
+  const handleReset = () => {
+    setQuery("");
+    setTemperament("");
+    setOrigin("");
+    setHasSearched(false);
+  };
+
   return (
     <>
       <Header />
-      <SearchField
-        setQuery={setQuery}
-        setTemperament={setTemperament}
-        setOrigin={setOrigin}
-      />
+
+      <div
+        className={`flex flex-col-reverse md:flex-row items-center mt-4 border border-gray-200 pb-4 px-4 md:px-0 ${hasSearched ? "justify-between" : "justify-end"}`}
+      >
+        {hasSearched && (
+          <button
+            className="rounded-full ml-6 bg-primary py-2 px-4 text-xsmall md:pr-4 text-white cursor-pointer transition-all flex justify-center items-center"
+            onClick={handleReset}
+          >
+            <ArrowLeft width={15} height={15} className="text-gray-200 mr-1" />
+            <span>View all dogs</span>
+          </button>
+        )}
+        <SearchField
+          setQuery={setQuery}
+          setTemperament={setTemperament}
+          setOrigin={setOrigin}
+          setHasSearched={setHasSearched}
+        />
+      </div>
+
       {error ? (
         <Error message="Something went wrong, please try again" />
       ) : loading ? (

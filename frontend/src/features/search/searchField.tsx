@@ -11,6 +11,7 @@ type SearchFieldProps = {
   setQuery: (query: string) => void;
   setTemperament: (temperament: string) => void;
   setOrigin: (origin: string) => void;
+  setHasSearched: (hasSearched: boolean) => void;
 };
 
 const allTemperaments = [
@@ -25,6 +26,7 @@ export function SearchField({
   setQuery,
   setTemperament,
   setOrigin,
+  setHasSearched,
 }: SearchFieldProps) {
   const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -100,6 +102,7 @@ export function SearchField({
     setQuery(value);
     setTemperament(selectedTemperaments.join(","));
     setOrigin(selectedOrigin);
+    setHasSearched(true);
   };
 
   return (

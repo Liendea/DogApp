@@ -1,4 +1,4 @@
-import type { Breed } from "../types/Breed";
+import type { Breed } from "@/types/Breed";
 
 export async function fetchDogs(
   query?: string,

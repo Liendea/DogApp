@@ -1,7 +1,7 @@
-import XIcon from "../reusable_components/XIcon";
-import InstagramIcon from "../reusable_components/InstagramIcon";
-import YoutubeIcon from "../reusable_components/YoutubeIcon";
-import LinkedinIcon from "../reusable_components/LinkedinIcon";
+import XIcon from "@/reusable_components/XIcon";
+import InstagramIcon from "@/reusable_components/InstagramIcon";
+import YoutubeIcon from "@/reusable_components/YoutubeIcon";
+import LinkedinIcon from "@/reusable_components/LinkedinIcon";
 
 export default function Footer() {
   return (

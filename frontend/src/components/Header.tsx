@@ -1,4 +1,4 @@
-import headerImage from "../assets/Header12.png";
+import headerImage from "@/assets/Header12.png";
 
 export default function Header() {
   return (

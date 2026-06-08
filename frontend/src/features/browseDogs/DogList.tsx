@@ -1,5 +1,5 @@
 import SimpleDogCard from "./SimpleDogCard";
-import type { Breed } from "../../types/Breed";
+import type { Breed } from "@/types/Breed";
 import { useState } from "react";
 import Modal from "../dogDetails/Modal";
 

@@ -1,6 +1,6 @@
 # DogApp
 
-A dog breed discovery app where you can browse, search, and filter hundreds of dog breeds — and save your favorites.
+A dog breed discovery app where you can browse, search, and filter hundreds of dog breeds* — and save your favorites.
 
 <img width="1950" height="1304" alt="bild" src="https://github.com/user-attachments/assets/a54c9706-24ed-4bb8-adad-e49036c2a97c" />
 
@@ -179,3 +179,6 @@ DogApp/
 
 Collaborators:
 Linda, Jose, Lisa, Erik, Hanna
+
+
+* More breeds will be added soon. 

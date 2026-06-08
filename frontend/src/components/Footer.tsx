@@ -1,44 +1,92 @@
-import XIcon from "../reusable_components/XIcon"
-import InstagramIcon from "../reusable_components/InstagramIcon"
-import YoutubeIcon from "../reusable_components/YoutubeIcon"
-import LinkedinIcon from "../reusable_components/LinkedinIcon"
+import XIcon from "../reusable_components/XIcon";
+import InstagramIcon from "../reusable_components/InstagramIcon";
+import YoutubeIcon from "../reusable_components/YoutubeIcon";
+import LinkedinIcon from "../reusable_components/LinkedinIcon";
 
 export default function Footer() {
-
   return (
-  <footer className="w-full border-t border-secondary h-40 p-8 sm:h-68.5 bg-white">
-    <div className="flex flex-col gap-8 md:flex-row md:gap-40">
-      <div className="flex flex-row gap-4">
-        <XIcon width={24} height={24} className="text-font-color-primary" />
-        <InstagramIcon width={24} height={24} className="text-font-color-primary"  />
-        <YoutubeIcon width={24} height={24} className="text-font-color-primary"  />
-        <LinkedinIcon  width={24} height={24} className="text-font-color-primary" />
-  </div>
-    <div className="grid grid-cols-3 gap-8">
-    <div className="flex flex-col gap-3 md:w-65.5 md:h-60.5">
-      <h3 className="font-bold mb-5">Use Cases</h3>
-      <p className="">Link</p>
-      <p className="">Link</p>
-      <p className="">Link</p>
-      <p className="">Link</p>
-    </div>
-    <div className="flex flex-col gap-3 md:w-65.5 md:h-60.5">
-      <h3 className="font-bold mb-5">Explore</h3>
-      <p className="">Link</p>
-      <p className="">Link</p>
-      <p className="">Link</p>
-      <p className="">Link</p>
-    </div>
-    <div className="flex flex-col gap-3 md:w-65.5 md:h-60.5">
-      <h3 className="font-bold mb-5">Resources</h3>
-      <p className="">Link</p>
-      <p className="">Link</p>
-      <p className="">Link</p>
-      <p className="">Link</p>
-    </div>
-    </div>
-    </div>
-    <p className="text-sm text-center md:text-right text-gray-500 mt-6 pb-4">@DogApp 2026</p>
-  </footer>
-  )
+    <footer className="w-full border-t border-secondary h-auto p-8 bg-white flex flex-col gap-10">
+      {/* RAD 1: Logga till vänster och Ikoner till höger (på samma rad) */}
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-gray-100 pb-6">
+        {/* Loggan */}
+        <div className="text-xl font-bold underline cursor-pointer tracking-wide text-font-color-primary mb-4 ">
+          DOGGO APP
+        </div>
+
+        {/* Ikonerna – hamnar till höger på större skärmar (sm och uppåt) */}
+        <div className="flex flex-row gap-4 justify-start items-center sm:justify-end">
+          <XIcon
+            width={20}
+            height={20}
+            className="text-font-color-primary cursor-pointer hover:opacity-80"
+          />
+          <LinkedinIcon
+            width={20}
+            height={20}
+            className="text-font-color-primary cursor-pointer hover:opacity-80"
+          />
+          <InstagramIcon
+            width={20}
+            height={20}
+            className="text-font-color-primary cursor-pointer hover:opacity-80"
+          />
+
+          <YoutubeIcon
+            width={24}
+            height={24}
+            className="text-font-color-primary cursor-pointer hover:opacity-80"
+          />
+        </div>
+      </div>
+
+      {/* RAD 2: Länkarna – helt på en egen rad under loggan, vänsterställda */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-x-16 w-full md:max-w-xl text-left">
+        {/* Column 1: Dog Breeds */}
+        <div className="flex flex-col gap-3">
+          <h3 className="font-bold mb-2">Breeds</h3>
+          <p className="cursor-pointer hover:underline text-sm">All Breeds</p>
+          <p className="cursor-pointer hover:underline text-sm">
+            Calm Family Dogs
+          </p>
+          <p className="cursor-pointer hover:underline text-sm">
+            Active Companions
+          </p>
+          <p className="cursor-pointer hover:underline text-sm">
+            Hypoallergenic
+          </p>
+        </div>
+
+        {/* Column 2: Explore */}
+        <div className="flex flex-col gap-3">
+          <h3 className="font-bold mb-2">Explore</h3>
+          <p className="cursor-pointer hover:underline text-sm">About DogApp</p>
+          <p className="cursor-pointer hover:underline text-sm">Features</p>
+          <p className="cursor-pointer hover:underline text-sm">
+            Articles & Tips
+          </p>
+          <p className="cursor-pointer hover:underline text-sm">
+            Find Breeders
+          </p>
+        </div>
+
+        {/* Column 3: Support */}
+        <div className="flex flex-col gap-3">
+          <h3 className="font-bold mb-2">Support</h3>
+          <p className="cursor-pointer hover:underline text-sm">Help Center</p>
+          <p className="cursor-pointer hover:underline text-sm">Contact Us</p>
+          <p className="cursor-pointer hover:underline text-sm">
+            Terms of Service
+          </p>
+          <p className="cursor-pointer hover:underline text-sm">
+            Privacy Policy
+          </p>
+        </div>
+      </div>
+
+      {/* Copyright-texten i botten */}
+      <p className="text-sm text-center md:text-left text-gray-500 mt-4 pb-2">
+        @ DogApp 2026
+      </p>
+    </footer>
+  );
 }

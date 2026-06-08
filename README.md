@@ -15,6 +15,7 @@ A dog breed discovery app where you can browse, search, and filter hundreds of d
 - **Breed details** — Click any breed card to open a detailed view with description, life span, and temperament
 - **Favorites** — Mark breeds as favorites directly from the detail view
 - **Back to all dogs** — One-click reset to return to the full breed list after filtering
+- *More breeds will be added soon. 
 
 ---
 
@@ -181,4 +182,4 @@ Collaborators:
 Linda, Jose, Lisa, Erik, Hanna
 
 
-* More breeds will be added soon. 
+

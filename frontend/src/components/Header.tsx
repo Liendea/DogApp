@@ -3,7 +3,7 @@ import headerImage from "../assets/Header12.png";
 export default function Header() {
   return (
     <header className="relative bg-white flex items-center justify-center md:justify-start text-center md:text-left h-90 md:h-120 lg:h-160 overflow-hidden">
-      <h1 className="absolute text-3xl md:text-4xl font-bold top-1 mt-5 border-b-5 z-10 left-1/2 -translate-x-1/2 whitespace-nowrap">
+      <h1 className="absolute text-3xl md:text-4xl font-bold top-1 mt-10 border-b-5 z-10 left-1/2 -translate-x-1/2 whitespace-nowrap">
         DOGGO APP
       </h1>
 
